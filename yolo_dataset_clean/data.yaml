@@ -1,0 +1,7 @@
+names:
+  0: Fair
+  1: Poor
+  2: Severe
+path: /Users/srijanupadhyay/Desktop/Project/Corossion Project/yolo_dataset_clean
+train: images/train
+val: images/val
