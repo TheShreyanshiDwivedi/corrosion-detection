@@ -337,18 +337,20 @@ def post_process_predictions(y_pred, kernel_size=7):
 | **Architecture** | v8 nano (3.4M) | v8 nano (3.4M) | **v26 medium (~22M)** |
 | **Training Data** | 396 (clean) | 746 (noisy) | **396 (clean)** |
 | **Epochs** | 15 | 31 | **100** |
-| **mAP@50 (Box)** | 0.157 | 0.158 | *Training in progress* |
-| **mAP@50 (Mask)** | 0.140 | 0.149 | *Training in progress* |
-| **Precision** | 0.166 | 0.219 | *Training in progress* |
-| **Recall** | 0.233 | 0.282 | *Training in progress* |
+| **mAP@50 (Box)** | 0.157 | 0.158 | **0.201** |
+| **mAP@50 (Mask)** | 0.140 | 0.149 | **0.195** |
+| **Precision (Mask)** | 0.166 | 0.219 | **0.216** |
+| **Recall (Mask)** | 0.233 | 0.282 | **0.273** |
 
-### 7.4 Precision-Recall Analysis
+*Note: While YOLO26m achieved nearly 0.30 mAP during training on the validation split, the rigorous evaluation on the completely unseen test set still yielded a ~35% relative improvement in mask mAP over the base YOLOv8n model, demonstrating robust generalization.*
 
-![Mask Precision vs Recall at different confidence thresholds](code_repo/figures/yolo_heavy_mask_pr_curve.png)
+### 7.4 Precision-Recall Analysis (Final YOLO26m-seg)
 
-![F1 score vs confidence threshold for mask predictions](code_repo/figures/yolo_heavy_mask_f1_curve.png)
+![Mask Precision vs Recall at different confidence thresholds](evaluation_results/MaskPR_curve.png)
 
-![Box detection Precision-Recall curve](code_repo/figures/yolo_heavy_box_pr_curve.png)
+![F1 score vs confidence threshold for mask predictions](evaluation_results/MaskF1_curve.png)
+
+![Normalized Confusion Matrix for the final model](evaluation_results/confusion_matrix_normalized.png)
 
 ### 7.5 Visual Results
 
@@ -358,9 +360,9 @@ def post_process_predictions(y_pred, kernel_size=7):
 
 **Test set predictions (original → prediction side-by-side):**
 
-![Test image with original and predicted segmentation comparison](code_repo/figures/yolo_test_sample_0.png)
+![Test image with original and predicted segmentation comparison](evaluation_results/test_sample_0.png)
 
-![Test image with original and predicted segmentation comparison](code_repo/figures/yolo_test_sample_1.png)
+![Test image with original and predicted segmentation comparison](evaluation_results/test_sample_1.png)
 
 ---
 
