@@ -214,7 +214,7 @@ available_deeplab_models = {
 }
 
 available_yolo_models = {
-    "YOLO26m-seg Retrained (Recommended — Latest Architecture)": "runs/segment/retrained/corrosion_yolo26m_proper/weights/best.pt",
+    "YOLO26m-seg Retrained (Recommended — Latest Architecture)": "runs/segment/runs/segment/retrained/corrosion_yolo26m_proper/weights/best.pt",
     "Heavy-Tuned YOLOv8n-seg (Web-Scraped + Bridge Dataset)": "runs/segment/yolo_project_final/corrosion_heavy_seg/weights/best.pt",
     "Base YOLOv8n-seg (Original Bridge Dataset only)": "runs/segment/yolo_project/corrosion_seg/weights/best.pt"
 }

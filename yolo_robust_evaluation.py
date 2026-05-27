@@ -7,7 +7,7 @@ import numpy as np
 from ultralytics import YOLO
 
 def main():
-    model_path = "runs/segment/yolo_project_final/corrosion_heavy_seg/weights/best.pt"
+    model_path = "runs/segment/runs/segment/retrained/corrosion_yolo26m_proper/weights/best.pt"
     if not os.path.exists(model_path):
         print(f"Error: Model path {model_path} does not exist.")
         return
