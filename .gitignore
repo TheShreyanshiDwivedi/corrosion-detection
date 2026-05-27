@@ -10,10 +10,8 @@ scraped_images_raw/
 scraped_labels_raw/
 yolo_dataset/
 yolo_dataset_heavy/
-yolo_dataset_clean/images/
 
 # All images (push code first)
-Corrosion Condition State Classification/
 
 # Training runs (large)
 runs/
@@ -27,6 +25,3 @@ test_input.jpg
 prediction_output.png
 prediction_output_mask.png
 rusted_rod_prediction.png
-predictions/
-predictions_yolo/
-evaluation_results/
