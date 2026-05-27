@@ -97,9 +97,9 @@ Each mask uses a specific color to indicate the condition state:
 
 Notice that last number: **131 instances of Severe corrosion** out of 3,729 total. That's 3.5%. This severe class imbalance is one of the biggest challenges in this project — the model sees 19× more "Fair" examples than "Severe" ones during training.
 
-![Corrosion condition states with visual descriptions](/Users/srijanupadhyay/.gemini/antigravity/brain/dffdd2a7-5961-4662-a2c1-92831c9c0b58/figures/corrosion_pred_with_descriptions.png)
+![Corrosion condition states with visual descriptions](code_repo/figures/corrosion_pred_with_descriptions.png)
 
-![Class color mapping legend](/Users/srijanupadhyay/.gemini/antigravity/brain/dffdd2a7-5961-4662-a2c1-92831c9c0b58/figures/class_color_mapping.png)
+![Class color mapping legend](code_repo/figures/class_color_mapping.png)
 
 ### 3.2 Converting for YOLO
 
@@ -310,25 +310,25 @@ def post_process_predictions(y_pred, kernel_size=7):
 | **Backbone** | ResNet-101 |
 | **Best Checkpoint** | Epoch 35/40 |
 
-![DeepLabV3+ quantitative results across loss functions](/Users/srijanupadhyay/.gemini/antigravity/brain/dffdd2a7-5961-4662-a2c1-92831c9c0b58/figures/deeplab_results_table.png)
+![DeepLabV3+ quantitative results across loss functions](code_repo/figures/deeplab_results_table.png)
 
 **Sample Prediction — DeepLabV3+ segmentation overlay:**
 
-![DeepLabV3+ corrosion segmentation with color-coded severity overlay](/Users/srijanupadhyay/.gemini/antigravity/brain/dffdd2a7-5961-4662-a2c1-92831c9c0b58/figures/deeplab_prediction_output.png)
+![DeepLabV3+ corrosion segmentation with color-coded severity overlay](code_repo/figures/deeplab_prediction_output.png)
 
 ### 7.2 YOLO Training Curves
 
 **Base model (YOLOv8n, 15 epochs) — the first attempt:**
 
-![Training loss and metrics for the initial YOLOv8n base model](/Users/srijanupadhyay/.gemini/antigravity/brain/dffdd2a7-5961-4662-a2c1-92831c9c0b58/figures/yolo_base_training_results.png)
+![Training loss and metrics for the initial YOLOv8n base model](code_repo/figures/yolo_base_training_results.png)
 
-![Confusion matrix showing the base model's classification accuracy](/Users/srijanupadhyay/.gemini/antigravity/brain/dffdd2a7-5961-4662-a2c1-92831c9c0b58/figures/yolo_base_confusion_matrix.png)
+![Confusion matrix showing the base model's classification accuracy](code_repo/figures/yolo_base_confusion_matrix.png)
 
 **Heavy-tuned model (YOLOv8n, 31 epochs, merged data) — the second attempt:**
 
-![Training curves for the heavy-tuned model with merged dataset](/Users/srijanupadhyay/.gemini/antigravity/brain/dffdd2a7-5961-4662-a2c1-92831c9c0b58/figures/yolo_heavy_training_results.png)
+![Training curves for the heavy-tuned model with merged dataset](code_repo/figures/yolo_heavy_training_results.png)
 
-![Confusion matrix for the heavy-tuned model](/Users/srijanupadhyay/.gemini/antigravity/brain/dffdd2a7-5961-4662-a2c1-92831c9c0b58/figures/yolo_heavy_confusion_matrix.png)
+![Confusion matrix for the heavy-tuned model](code_repo/figures/yolo_heavy_confusion_matrix.png)
 
 ### 7.3 Model Comparison
 
@@ -344,23 +344,23 @@ def post_process_predictions(y_pred, kernel_size=7):
 
 ### 7.4 Precision-Recall Analysis
 
-![Mask Precision vs Recall at different confidence thresholds](/Users/srijanupadhyay/.gemini/antigravity/brain/dffdd2a7-5961-4662-a2c1-92831c9c0b58/figures/yolo_heavy_mask_pr_curve.png)
+![Mask Precision vs Recall at different confidence thresholds](code_repo/figures/yolo_heavy_mask_pr_curve.png)
 
-![F1 score vs confidence threshold for mask predictions](/Users/srijanupadhyay/.gemini/antigravity/brain/dffdd2a7-5961-4662-a2c1-92831c9c0b58/figures/yolo_heavy_mask_f1_curve.png)
+![F1 score vs confidence threshold for mask predictions](code_repo/figures/yolo_heavy_mask_f1_curve.png)
 
-![Box detection Precision-Recall curve](/Users/srijanupadhyay/.gemini/antigravity/brain/dffdd2a7-5961-4662-a2c1-92831c9c0b58/figures/yolo_heavy_box_pr_curve.png)
+![Box detection Precision-Recall curve](code_repo/figures/yolo_heavy_box_pr_curve.png)
 
 ### 7.5 Visual Results
 
 **YOLO detecting corrosion on a completely unseen image:**
 
-![YOLO instance segmentation detecting and classifying corrosion regions with confidence scores](/Users/srijanupadhyay/.gemini/antigravity/brain/dffdd2a7-5961-4662-a2c1-92831c9c0b58/figures/rusted_rod_prediction.png)
+![YOLO instance segmentation detecting and classifying corrosion regions with confidence scores](code_repo/figures/rusted_rod_prediction.png)
 
 **Test set predictions (original → prediction side-by-side):**
 
-![Test image with original and predicted segmentation comparison](/Users/srijanupadhyay/.gemini/antigravity/brain/dffdd2a7-5961-4662-a2c1-92831c9c0b58/figures/yolo_test_sample_0.png)
+![Test image with original and predicted segmentation comparison](code_repo/figures/yolo_test_sample_0.png)
 
-![Test image with original and predicted segmentation comparison](/Users/srijanupadhyay/.gemini/antigravity/brain/dffdd2a7-5961-4662-a2c1-92831c9c0b58/figures/yolo_test_sample_1.png)
+![Test image with original and predicted segmentation comparison](code_repo/figures/yolo_test_sample_1.png)
 
 ---
 
